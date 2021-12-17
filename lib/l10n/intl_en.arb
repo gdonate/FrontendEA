@@ -1,0 +1,19 @@
+{
+    "hello": "Hello",
+    "time": "Just in Time",
+    "allExercices": "Publications",
+    "today": "Today",
+    "settings": "Settings",
+    "search": "Search",
+    "email": "Email",
+    "password": "Password",
+    "login":"Login",
+    "wrongPass": "I forgot password",
+    "maps":"Maps",
+    "chat": "Chat",
+    "report": "Report",
+    "register": "Register",
+    "user": "Username"
+
+  
+}

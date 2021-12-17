@@ -1,0 +1,19 @@
+{
+    "hello": "Hola",
+    "time": "Todo a tiempo",
+    "allExercices": "Publicaciones",
+    "today": "Calendario",
+    "settings": "Ajustes",
+    "search": "Buscar",
+    "email": "Introducir correo electronico",
+    "password": "Introducir contraseña",
+    "login": "Iniciar Sesión",
+    "wrongPass": "¿Has olvidado la contraseña?",
+    "maps":"Mapa",
+    "chat": "Chat",
+    "report": "Reportar",
+    "register": "Registrarse",
+    "user": "Nombre de usuario"
+
+
+}
