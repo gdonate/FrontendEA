@@ -1,0 +1,27 @@
+{
+    "hello": "Hello",
+    "time": "Just in Time",
+    "allExercices": "Publications",
+    "today": "Today",
+    "settings": "Settings",
+    "search": "Search",
+    "email": "Email",
+    "password": "Password",
+    "login":"Login",
+    "wrongPass": "I forgot password",
+    "maps":"Maps",
+    "chat": "Chat",
+    "report": "Report",
+    "register": "Register",
+    "user": "Username",
+    "perfil": "perfil",
+    "userprofile": "User Profile",
+    "lastagresion": "Este servicio ha sido reportado por otro usuario",
+    "descripcion2": "Descripción: ",
+    "owner":"Nombre:",
+    "direccion": "Dirección: ",
+    "nombrel":"Nombre del servicio: "
+
+
+  
+}
