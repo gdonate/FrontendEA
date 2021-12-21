@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:registro/screens/MapaScreen.dart';
+import 'package:registro/screens/service_full_screen.dart';
 import 'package:registro/screens/splash_screen.dart';
 import 'blocs/registro_bloc.dart';
 import 'generated/l10n.dart';
@@ -36,19 +37,20 @@ class MyApp extends StatelessWidget {
           GlobalCupertinoLocalizations.delegate,
         ],
         supportedLocales: S.delegate.supportedLocales,
-        
-        home: const SplashScreen(),
+        home: HomeScreen(),
         routes: routes,
       ),
     );
   }
 }
 
-var routes = <String,WidgetBuilder>{
-  "/welcome":(BuildContext context) => const WelcomeScreen(),
-  "/login":(BuildContext context) => LoginPage(), //Poner el nombre de la clase de login de su propia pantalla
-  "/register":(BuildContext context) => Registro(),
-  "/home":(BuildContext context) => HomeScreen(), //Poner el nombre de la clase de register de su propia pantalla
-  "/map":(BuildContext context) => MapaScreen(), //Poner el nombre de la clase de register de su propia pantalla
+var routes = <String, WidgetBuilder>{
+  "/welcome": (BuildContext context) => const WelcomeScreen(),
+  "/login": (BuildContext context) =>
+      LoginPage(), //Poner el nombre de la clase de login de su propia pantalla
+  "/register": (BuildContext context) => Registro(),
+  "/home": (BuildContext context) =>
+      HomeScreen(), //Poner el nombre de la clase de register de su propia pantalla
+  "/map": (BuildContext context) =>
+      MapaScreen(), //Poner el nombre de la clase de register de su propia pantalla
 };
-

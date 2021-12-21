@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:registro/util/navegate.dart';
 import 'category_card.dart';
 
 class ServiceCard extends StatelessWidget {
@@ -10,7 +12,14 @@ class ServiceCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CategoryCard(
-        svgSrc: this.imgUrl, title: this.description, press: () {});
+    return Card(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(width: 150.0, child: Image.asset(imgUrl)),
+          Text(description),
+        ],
+      ),
+    );
   }
 }

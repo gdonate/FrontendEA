@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
 class Navegate {
-
   static void goToWelcome(BuildContext context) {
     Navigator.pushNamed(context, "/welcome");
   }
@@ -13,10 +12,16 @@ class Navegate {
   static void goToRegister(BuildContext context) {
     Navigator.pushNamed(context, "/register");
   }
+
   static void goToHome(BuildContext context) {
     Navigator.pushNamed(context, "/home");
   }
+
   static void goToMapa(BuildContext context) {
     Navigator.pushNamed(context, "/map");
+  }
+
+  static void goToService(BuildContext context) {
+    Navigator.pushNamed(context, '/service');
   }
 }

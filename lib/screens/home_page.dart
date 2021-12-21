@@ -3,11 +3,11 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:registro/generated/l10n.dart';
+import 'package:registro/screens/service_full_screen.dart';
 import 'package:registro/widget/bottom_nav_bar.dart';
 import "package:http/http.dart" as http;
 import 'package:registro/widget/service_card.dart';
 import '../util/navegate.dart';
-
 
 import '../platform_utils.dart';
 
@@ -35,45 +35,33 @@ class HomeScreen extends StatelessWidget {
         // ],
       ),
       drawer: Drawer(
-        child: ListView(
-          padding:EdgeInsets.zero,
-          children: <Widget>[
-            UserAccountsDrawerHeader(
-                accountName: Text('Toni Oller', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24)) ,
-                accountEmail: Text('tonieetac@gmail.com', style: TextStyle(fontSize: 18)),
-                currentAccountPicture: CircleAvatar(backgroundImage: AssetImage("assets/logo.png")),
-            ),
-            ListTile(
-              leading: Icon(Icons.message),
-              title: Text(
-                  S.current.chat,
-                  style: TextStyle(fontSize: 20)
-              ),
-              onTap: () {},
-            ),
-            ListTile(
-              leading: Icon(Icons.room),
-              title: Text(
-                  S.current.maps,
-                  style: TextStyle(fontSize: 20)
-              ),
-              onTap: () {
-                Navegate.goToMapa(context);
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.room),
-              title: Text(
-                  S.current.report,
-                  style: TextStyle(fontSize: 20)
-              ),
-              onTap: () {
-                
-              },
-            ),
-          ]
-        )
-      ),
+          child: ListView(padding: EdgeInsets.zero, children: <Widget>[
+        UserAccountsDrawerHeader(
+          accountName: Text('Toni Oller',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24)),
+          accountEmail:
+              Text('tonieetac@gmail.com', style: TextStyle(fontSize: 18)),
+          currentAccountPicture:
+              CircleAvatar(backgroundImage: AssetImage("assets/logo.png")),
+        ),
+        ListTile(
+          leading: Icon(Icons.message),
+          title: Text(S.current.chat, style: TextStyle(fontSize: 20)),
+          onTap: () {},
+        ),
+        ListTile(
+          leading: Icon(Icons.room),
+          title: Text(S.current.maps, style: TextStyle(fontSize: 20)),
+          onTap: () {
+            Navegate.goToMapa(context);
+          },
+        ),
+        ListTile(
+          leading: Icon(Icons.room),
+          title: Text(S.current.report, style: TextStyle(fontSize: 20)),
+          onTap: () {},
+        ),
+      ])),
       bottomNavigationBar: BottomNavBar(),
       body: Stack(
         children: <Widget>[
@@ -158,8 +146,17 @@ ListView _buildCards(BuildContext context, List services) {
       scrollDirection: Axis.horizontal,
       shrinkWrap: true,
       itemBuilder: (context, index) {
-        return ServiceCard(
-            description: services[index]['description'],
-            imgUrl: services[index]['img_url']);
+        String description = services[index]['description'];
+        String img = services[index]['img_url'];
+        return GestureDetector(
+          onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => ServiceFullScreen(
+                        description: description,
+                        img: img,
+                      ))),
+          child: ServiceCard(description: description, imgUrl: img),
+        );
       });
 }

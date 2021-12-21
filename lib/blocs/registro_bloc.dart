@@ -88,11 +88,9 @@ class RegistroBloc {
     }
   });
 
-
-
   Future<User> createUser() async {
     final response = await http.post(
-      Uri.parse('http://localhost:8080/api/user'),
+      Uri.parse('http://147.83.7.156:4545/api/user'),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
       },
@@ -102,13 +100,11 @@ class RegistroBloc {
         "password": _password.value
       }),
     );
-    if(response.statusCode == 201){
+    if (response.statusCode == 201) {
       return User.fromJson(jsonDecode(response.body));
-    }
-    else if(response.statusCode == 405){
+    } else if (response.statusCode == 405) {
       throw Exception("El usuario ya existe");
-    }
-    else{
+    } else {
       throw Exception("Error creando al usuario");
     }
   }
