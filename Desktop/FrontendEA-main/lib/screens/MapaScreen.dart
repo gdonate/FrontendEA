@@ -14,24 +14,69 @@ class _MapaScreenState extends State<MapaScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Encuentra tus intereses'),
-      ),
-      body: GoogleMap(
-        initialCameraPosition: CameraPosition(
-          target: widget.fromPoint,
-          zoom:12,
+      body: Stack(
+        children: [
+          Positioned.fill(
+            child: GoogleMap(
+              initialCameraPosition: CameraPosition(
+                target: widget.fromPoint,
+                zoom:12,
+              ),
+              markers: _createMarkers(),
+              onMapCreated: _onMapCreated,
+              myLocationEnabled: true,
+              myLocationButtonEnabled: true,
+            ),
         ),
-        markers: _createMarkers(),
-        onMapCreated: _onMapCreated,
-        myLocationEnabled: true,
-        myLocationButtonEnabled: true,
-      ),
-      floatingActionButton: FloatingActionButton(
-      child: Icon(Icons.zoom_out_map),
-      onPressed: _centerView,
-      ),
-    );
+        Positioned(
+          top: 100,
+          left: 0,
+          right: 0,
+          child: Container(
+            padding: EdgeInsets.all(12),
+            margin: EdgeInsets.only(top: 10, bottom: 10, left: 20, right: 20),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(100),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.2),
+                  blurRadius: 10,
+                  offset: Offset.zero
+                )
+              ]
+            ),
+          child:Row(
+            children: [
+              Container(
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+                  image: DecorationImage(
+                    image: AssetImage('assets/logo.png'),
+                    fit: BoxFit.cover
+                  )
+                )
+              ),
+              SizedBox(width: 10),
+              Expanded(
+                  child: Column(
+                    children: [
+                      Text('Radio de Busqueda',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey
+                        )
+                      ),
+                    ],
+                  )
+              )
+            ],
+          )
+        )
+      )
+    ]));
   }
   Set<Marker> _createMarkers() {
     var tmp = Set<Marker>();
@@ -73,4 +118,13 @@ class _MapaScreenState extends State<MapaScreen> {
     var cameraUpdate = CameraUpdate.newLatLngBounds(bounds, 50);
     _mapController.animateCamera(cameraUpdate);
   }
+}
+
+// Tratamos de comparar las diferentes distancias entre chinchetas
+
+void _RadioDistancia (location userlocation, int radio, List<users> milista) {
+  for milista.location[i]
+      if (location.distanceTo(milista.location[i])) < radio
+        milista[i].mostrar = true;
+  i++;
 }
