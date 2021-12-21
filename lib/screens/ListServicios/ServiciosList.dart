@@ -73,7 +73,7 @@ class ListaServiciosScreen extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: Body(),
+      body: Container(),
     );
   }
 }

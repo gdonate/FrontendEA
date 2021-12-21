@@ -40,7 +40,7 @@ class ListaUsuariosScreen extends StatelessWidget {
     return Scaffold(
       drawer: SideServicio(),
       appBar: AppBar(
-        backgroundColor:  Color(0xFFFFA50E),
+        backgroundColor: Color(0xFFFFA50E),
         title: Text(
           'Lista de Usuarios',
           style: const TextStyle(
@@ -51,7 +51,7 @@ class ListaUsuariosScreen extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: Body(),
+      body: Container(),
     );
   }
 }
