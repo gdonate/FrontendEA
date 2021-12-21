@@ -218,8 +218,20 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "js",
+      "rootUri": "file:///C:/Users/Daniel/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/js-0.6.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "lints",
       "rootUri": "file:///C:/Users/Daniel/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/lints-1.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "logging",
+      "rootUri": "file:///C:/Users/Daniel/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/logging-1.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -386,6 +398,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "socket_io_client",
+      "rootUri": "file:///C:/Users/Daniel/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/socket_io_client-1.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "socket_io_common",
+      "rootUri": "file:///C:/Users/Daniel/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/socket_io_common-1.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "source_span",
       "rootUri": "file:///C:/Users/Daniel/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/source_span-1.8.1",
       "packageUri": "lib/",
@@ -524,7 +548,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-12-21T12:29:56.281537Z",
+  "generated": "2021-12-21T15:45:26.845416Z",
   "generator": "pub",
   "generatorVersion": "2.16.0-77.0.dev"
 }
