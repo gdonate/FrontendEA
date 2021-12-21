@@ -9,7 +9,8 @@ User currentUser = User(
   edad: '',
   descripcion: '',
   imageUrl: '',
-  puntuacion: 0,
+  puntuacion: 0, 
+  time: 0,
 );
 
 final List<User> onlineUsers = [
@@ -23,7 +24,8 @@ final List<User> onlineUsers = [
   edad: '24',
   descripcion: 'Nice job',
   imageUrl: 'https://avatarfiles.alphacoders.com/844/thumb-1920-84463.jpg',
-  puntuacion: 0,
+  puntuacion: 0, 
+  time: 100,
   ),
 
   User(
@@ -36,6 +38,7 @@ final List<User> onlineUsers = [
   descripcion: 'Brother',
   imageUrl: 'https://avatarfiles.alphacoders.com/265/thumb-1920-265932.jpg',
   puntuacion: 0,
+  time: 50,
   ),
 ];
 

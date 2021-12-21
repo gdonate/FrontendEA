@@ -10,6 +10,7 @@ class Servicio{
   final String descripcion;
   final String imageUrl;
   final String agresion;
+  final int time;
 
   const Servicio({
     required this.id,
@@ -19,7 +20,9 @@ class Servicio{
     required this.idOwner,
     required this.descripcion,
     required this.imageUrl,
-    required this.agresion
+    required this.agresion,
+    required this.time,
+
     
   });
 
@@ -32,7 +35,8 @@ class Servicio{
       idOwner: json['idOwner'],
       descripcion: json['descripcion'],
       imageUrl: json['imageUrl'],
-      agresion: json['agresion']
+      agresion: json['agresion'],
+      time: json['time']
     );
   }
 }

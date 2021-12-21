@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:registro/Screens/home_page.dart';
 import 'package:registro/Screens/MapaScreen.dart';
 import 'package:registro/Screens/perfil.dart';
-import '/UserList/UserList_screen.dart';
 import 'package:registro/screens/welcome_screen.dart';
+import 'package:registro/screens/Historico/historico.dart';
 import 'package:registro/constants.dart';
 import 'package:registro/data/data.dart';
 // import 'package:registro/Screens/BarList/barlist_screen.dart';
@@ -76,6 +76,23 @@ class SideServicio extends StatelessWidget {
               },
           ),
           ListTile(
+            tileColor: Color(0xFFFFA50E),
+            leading: Icon(
+              Icons.money,
+              color: Colors.white,
+            ),
+            title: Text(
+              "Histórico",
+              style: TextStyle(color: Colors.white),
+            ),
+           onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) {
+                return Historico();
+              }),
+            ),
+          ),
+          ListTile(
               tileColor: Color(0xFFFFA50E),
               leading: Icon(
                 Icons.chat_bubble,
@@ -85,12 +102,8 @@ class SideServicio extends StatelessWidget {
                 "Chat",
                 style: TextStyle(color: Colors.white),
               ),
-              onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) {
-                return ListaUsuariosScreen();
-              }),
-            ),
+              onTap: () => null,
+            
               ),
           ListTile(
             tileColor: Color(0xFFFFA50E),

@@ -182,6 +182,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "font_awesome_flutter",
+      "rootUri": "file:///C:/Users/gabri/Desktop/EA/Flutter/flutter_windows_2.5.3-stable/flutter/.pub-cache/hosted/pub.dartlang.org/font_awesome_flutter-8.12.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
       "name": "google_maps_flutter",
       "rootUri": "file:///C:/Users/gabri/Desktop/EA/Flutter/flutter_windows_2.5.3-stable/flutter/.pub-cache/hosted/pub.dartlang.org/google_maps_flutter-2.1.1",
       "packageUri": "lib/",
@@ -518,7 +524,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-12-20T21:21:13.587028Z",
+  "generated": "2021-12-21T14:55:18.094553Z",
   "generator": "pub",
   "generatorVersion": "2.14.4"
 }

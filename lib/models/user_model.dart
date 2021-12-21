@@ -10,6 +10,7 @@ class User{
   final String descripcion;
   final String imageUrl;
   final int puntuacion;
+  final int time;
 
   //User(this.id, this.username, this.password, this.email, this.name, this.edad, this.descripcion, this.imageUrl, this.puntuacion);
 
@@ -23,6 +24,7 @@ class User{
     required this.descripcion,
     required this.imageUrl,
     required this.puntuacion,
+    required this.time,
   } 
   );
 
@@ -37,6 +39,7 @@ class User{
       descripcion: json['descripcion'],
       imageUrl: json['imageUrl'],
       puntuacion: json['puntuacion'],
+      time: json['time'],
     );
   }
 }
