@@ -5,12 +5,12 @@ import '../util/navegate.dart';
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({ Key? key}) : super(key: key);
 
-  @override 
+  @override
   _WelcomeScreenState createState() => _WelcomeScreenState();
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen>{
-  @override 
+  @override
   Widget build(BuildContext context){
     return Scaffold(
       body: Stack(
@@ -25,9 +25,9 @@ class _WelcomeScreenState extends State<WelcomeScreen>{
             ),
           ),
           Column(
-            
+
             children: [
-              
+
               Padding(padding: EdgeInsets.only(top: 60.0)),
               Expanded(
                 flex: 1,
@@ -44,7 +44,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>{
                 ),
               ),
             ],
-            
+
           ),
           Column(
             children: [
@@ -71,7 +71,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>{
           //                     fontSize: 14,
           //                     fontWeight: FontWeight.w400,
           //                     color: Colors.white,
-          //                   ), 
+          //                   ),
           //                 ),
           //               ],
           //             ),
@@ -86,7 +86,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>{
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children:[ 
+                  children:[
                     MaterialButton(
                       height: 49,
                       minWidth: 285,
@@ -94,7 +94,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>{
                       elevation: 0,
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
                       child: Text(
-                        S.current.register, 
+                        S.current.register,
                         style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w600,
@@ -115,7 +115,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>{
                       elevation: 0,
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
                       child: Text(
-                          S.current.login, 
+                          S.current.login,
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
@@ -132,7 +132,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>{
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: const [
-                          Text("Al iniciar sesión aceptas los ", 
+                          Text("Al iniciar sesión aceptas los ",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                             fontSize: 12,
@@ -141,7 +141,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>{
                           )),
                         ],
                       ),
-                      const Text("términos y condiciones y la política de privacidad.", 
+                      const Text("términos y condiciones y la política de privacidad.",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                         fontSize: 12,
@@ -155,7 +155,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>{
                       elevation: 0,
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
                       child: Text(
-                          "HOME", 
+                          "HOME",
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
@@ -168,7 +168,25 @@ class _WelcomeScreenState extends State<WelcomeScreen>{
                     ),
                     const SizedBox(
                       height: 16,
+                    ),
+                    MaterialButton(
+                      height: 49,
+                      minWidth: 285,
+                      color: const Color(0xFFFFFFFF).withOpacity(0.20),
+                      elevation: 0,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
+                      child: Text(
+                        "Publicaciones",
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white,
+                        ),
                       ),
+                      onPressed: () {
+                        Navegate.goToUsername(context);
+                      },
+                    ),
                   ],
                 ),
                 ),

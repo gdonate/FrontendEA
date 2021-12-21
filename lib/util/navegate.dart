@@ -22,4 +22,13 @@ class Navegate {
   static void goToPerfil(BuildContext context) {
     Navigator.pushNamed(context, "/perfil");
   }
+  static void goToUsername(BuildContext context) {
+    Navigator.pushNamed(context, "/username");
+  }
+  static void goToListaPublicaciones(BuildContext context) {
+    Navigator.pushNamed(context, "/publicaciones");
+  }
+  static void goToChat(BuildContext context) {
+    Navigator.pushNamed(context, "/chat");
+  }
 }

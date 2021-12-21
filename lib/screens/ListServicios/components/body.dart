@@ -9,9 +9,9 @@ import 'package:registro/screens/ListServicios/ServiciosList.dart';
 import 'background.dart';
 
 class Body extends StatelessWidget {
-  final Future<Servicio> servicio;
+  //final Future<Servicio> servicio;
 
-  Body({Key? key, this.servicio}) : super(key: key);
+  Body({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
+import 'package:registro/screens/ChatScreen.dart';
+import 'package:registro/screens/ListaPublicaciones.dart';
 import 'package:registro/screens/MapaScreen.dart';
+import 'package:registro/screens/Username.dart';
 import 'package:registro/screens/perfil.dart';
 import 'package:registro/screens/splash_screen.dart';
 import 'blocs/registro_bloc.dart';
@@ -52,6 +55,8 @@ var routes = <String,WidgetBuilder>{
   "/home":(BuildContext context) => HomeScreen(), //Poner el nombre de la clase de register de su propia pantalla
   "/map":(BuildContext context) => MapaScreen(), //Poner el nombre de la clase de register de su propia pantalla
   "/perfil":(BuildContext context) => PerfilUser(), //Poner el nombre de la clase de register de su propia pantalla
-
+  "/username":(BuildContext context) => UsernameScreen(), //Poner el nombre de la clase de register de su propia pantalla
+  //"/publicaciones":(BuildContext context) => ListaPublicaciones(), //Poner el nombre de la clase de register de su propia pantalla
+  //"/chat":(BuildContext context) => ChatScreen(), //Poner el nombre de la clase de register de su propia pantalla
 };
 
