@@ -10,7 +10,7 @@ import 'background.dart';
 
 class Body extends StatelessWidget {
   final Future<Servicio> servicio;
-
+//Si peta mejor comentarlo
   Body({Key? key, this.servicio}) : super(key: key);
 
   @override
