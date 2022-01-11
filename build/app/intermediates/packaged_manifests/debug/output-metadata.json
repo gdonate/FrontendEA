@@ -4,7 +4,7 @@
     "type": "PACKAGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "com.example.flutter_auth",
+  "applicationId": "com.example.registro",
   "variantName": "debug",
   "elements": [
     {

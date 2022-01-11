@@ -6,6 +6,8 @@ import 'package:registro/Screens/home_page.dart';
 import 'package:registro/Screens/MapaScreen.dart';
 import 'package:registro/Screens/perfil.dart';
 import 'package:registro/screens/welcome_screen.dart';
+import 'package:registro/screens/image.dart';
+import 'package:registro/screens/camera.dart';
 import 'package:registro/screens/Historico/historico.dart';
 import 'package:registro/constants.dart';
 import 'package:registro/data/data.dart';
@@ -89,6 +91,23 @@ class SideServicio extends StatelessWidget {
               context,
               MaterialPageRoute(builder: (context) {
                 return Historico();
+              }),
+            ),
+          ),
+          ListTile(
+            tileColor: Color(0xFFFFA50E),
+            leading: Icon(
+              Icons.money,
+              color: Colors.white,
+            ),
+            title: Text(
+              "Subir Imagen",
+              style: TextStyle(color: Colors.white),
+            ),
+           onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) {
+                return Camara();
               }),
             ),
           ),

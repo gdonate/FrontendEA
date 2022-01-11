@@ -72,13 +72,13 @@ class Historico extends StatelessWidget{
   Widget _expenses() {
     return Column(
       children: <Widget>[
-        Text("\$45,19",
+        Text("\$11",
         style: TextStyle(
           fontWeight: FontWeight.bold,
           fontSize: 40.0,
         ),
         ),
-        Text("Gastos totales",
+        Text("Tiempo restante",
         style: TextStyle(
           fontWeight: FontWeight.bold,
           fontSize: 16.0,
