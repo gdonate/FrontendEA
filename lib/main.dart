@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:registro/screens/MapaScreen.dart';
+import 'package:registro/screens/chat_screen.dart';
 import 'package:registro/screens/listChat_page.dart';
 import 'package:registro/screens/perfil.dart';
 import 'package:registro/screens/splash_screen.dart';
 import 'blocs/registro_bloc.dart';
 import 'generated/l10n.dart';
+import 'screens/listChat_userin.dart';
 import 'screens/registro.dart';
 import 'screens/LoginPage.dart';
 import 'screens/home_page.dart';
@@ -58,5 +60,8 @@ var routes = <String, WidgetBuilder>{
       MapaScreen(), //Poner el nombre de la clase de register de su propia pantalla
   "/perfil": (BuildContext context) =>
       PerfilUser(), //Poner el nombre de la clase de register de su propia pantalla
-  "/chatList": (BuildContext context) => ListChatPage(),
+
+  "/userchat": (BuildContext context) => UserIn(),
+  "/chatList": (BuildContext context) => ListChatPage(user: ""),
+  //"/indchat": (BuildContext context) => ChatScreen(username: "",contact:""),
 };

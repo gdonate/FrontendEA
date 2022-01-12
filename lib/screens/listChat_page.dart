@@ -1,7 +1,9 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:registro/models/user_model.dart';
+import 'package:registro/screens/chat_screen.dart';
 import 'package:registro/screens/welcome_screen.dart';
+import 'package:registro/socketioclient.dart';
 import 'package:socket_io_client/socket_io_client.dart' as IO;
 
 class ListChatPage extends StatefulWidget {
@@ -46,7 +48,9 @@ class _ListChatPageState extends State<ListChatPage> {
         child: ListView.builder(
           itemCount: users.length,
           itemBuilder: (context, index) {
-            return ListTile(
+            return
+                //(users[index]["username"] != widget.user)?
+                ListTile(
               title: Text(users[index]["username"]),
               subtitle: Row(
                 children: <Widget>[
@@ -62,7 +66,16 @@ class _ListChatPageState extends State<ListChatPage> {
                 ],
               ),
               leading: Icon(Icons.supervised_user_circle_outlined),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ChatScreen(
+                        username: widget.user,
+                        contact: users[index]["username"]),
+                  ),
+                );
+              },
             );
           },
         ),
@@ -74,12 +87,13 @@ class _ListChatPageState extends State<ListChatPage> {
     String username = widget.user;
     widget.usernameAlreadySelected = true;
 
-    socket = IO.io(
-        'http://localhost:4008',
-        IO.OptionBuilder()
-            .setTransports(['websocket']) // for Flutter or Dart VM
-            .disableAutoConnect() // disable auto-connection
-            .build());
+    socket = SocketClient().getSocketClient();
+    // IO.io(
+    //     'http://localhost:4008',
+    //     IO.OptionBuilder()
+    //         .setTransports(['websocket']) // for Flutter or Dart VM
+    //         .disableAutoConnect() // disable auto-connection
+    //         .build());
 
     //We attach the username in the auth object, and then call socket.connect()
     socket.auth = {"username": username};
