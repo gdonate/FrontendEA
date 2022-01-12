@@ -22,4 +22,10 @@ class Navegate {
   static void goToPerfil(BuildContext context) {
     Navigator.pushNamed(context, "/perfil");
   }
+  static void goToCamara(BuildContext context) {
+    Navigator.pushNamed(context, "/camera");
+  }
+  static void goToHistorico(BuildContext context) {
+    Navigator.pushNamed(context, "/historico");
+  }
 }

@@ -7,6 +7,7 @@ import 'package:registro/Screens/MapaScreen.dart';
 import 'package:registro/Screens/perfil.dart';
 import 'package:registro/screens/welcome_screen.dart';
 import 'package:registro/screens/image.dart';
+import 'package:registro/screens/perfil/profile_screen.dart';
 import 'package:registro/screens/camera.dart';
 import 'package:registro/screens/Historico/historico.dart';
 import 'package:registro/constants.dart';
@@ -95,23 +96,6 @@ class SideServicio extends StatelessWidget {
             ),
           ),
           ListTile(
-            tileColor: Color(0xFFFFA50E),
-            leading: Icon(
-              Icons.money,
-              color: Colors.white,
-            ),
-            title: Text(
-              "Subir Imagen",
-              style: TextStyle(color: Colors.white),
-            ),
-           onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) {
-                return Camara();
-              }),
-            ),
-          ),
-          ListTile(
               tileColor: Color(0xFFFFA50E),
               leading: Icon(
                 Icons.chat_bubble,
@@ -148,13 +132,13 @@ class SideServicio extends StatelessWidget {
               color: Colors.white,
             ),
             title: Text(
-              S.current.perfil,
+              "Perfil",
               style: TextStyle(color: Colors.white),
             ),
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(builder: (context) {
-                return PerfilUser();
+                return ProfileScreen();
               }),
             ),
             ),

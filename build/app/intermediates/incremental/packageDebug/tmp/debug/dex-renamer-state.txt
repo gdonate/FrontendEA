@@ -1,4 +1,4 @@
-#Sun Jan 09 22:24:42 CET 2022
+#Tue Jan 11 16:13:26 CET 2022
 base.0=C\:\\Users\\gabri\\Desktop\\Enginyeria d'Aplicacion\\Frontend\\Maps\\Maps-Drawer\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
