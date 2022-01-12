@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:registro/constants.dart';
 import 'package:registro/screens/perfil/profile_pic.dart';
+import 'package:registro/util/navegate.dart';
 
 class Body extends StatelessWidget{
   @override
@@ -17,18 +18,20 @@ class Body extends StatelessWidget{
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
             color: Color(0xFFF5F6F9),
           onPressed: () {
-
+            Navegate.goToHistorico(context);
           },
           child: Row(
             children: [
-              SvgPicture.asset('../../assets/icons/TimeIcon.svg',
+              SvgPicture.asset('assets/icons/TimeIcon.svg',
               width: 22,
               ),
+              
               SizedBox(width: 20),
               Expanded(
                 child: Text(
                   "Histórico",
               ),
+              
               ),
             ],
             
