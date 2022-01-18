@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:registro/Screens/home_page.dart';
 import 'package:registro/Screens/MapaScreen.dart';
 import 'package:registro/Screens/perfil.dart';
+import 'package:registro/screens/crearpublicacion.dart';
 import 'package:registro/screens/welcome_screen.dart';
 import 'package:registro/screens/image.dart';
 import 'package:registro/screens/perfil/profile_screen.dart';
@@ -71,12 +72,15 @@ class SideServicio extends StatelessWidget {
               color: Colors.white,
             ),
             title: Text(
-              "Publicaciones",
+              "Crear Publicacion",
               style: TextStyle(color: Colors.white),
             ),
-            onTap: () {
-                
-              },
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) {
+                return Nuevo();
+              }),
+            ),
           ),
           ListTile(
             tileColor: Color(0xFFFFA50E),

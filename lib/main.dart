@@ -4,7 +4,9 @@ import 'package:provider/provider.dart';
 import 'package:registro/screens/Historico/historico.dart';
 import 'package:registro/screens/MapaScreen.dart';
 import 'package:registro/screens/camera.dart';
+import 'package:registro/screens/crearpublicacion.dart';
 import 'package:registro/screens/perfil.dart';
+import 'package:registro/screens/perfil/profile_screen.dart';
 import 'package:registro/screens/splash_screen.dart';
 import 'blocs/registro_bloc.dart';
 import 'generated/l10n.dart';
@@ -24,8 +26,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     S.load(Locale('es', 'ES'));
 
-    return Provider(
-      create: (context) => RegistroBloc(),
+    return MultiProvider(
+      providers: [
+        Provider<RegistroBloc> (create:(context) => RegistroBloc()),
+      ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'inTime',
@@ -53,9 +57,10 @@ var routes = <String,WidgetBuilder>{
   "/register":(BuildContext context) => Registro(),
   "/home":(BuildContext context) => HomeScreen(), //Poner el nombre de la clase de register de su propia pantalla
   "/map":(BuildContext context) => MapaScreen(), //Poner el nombre de la clase de register de su propia pantalla
-  "/perfil":(BuildContext context) => PerfilUser(),
+  "/perfil":(BuildContext context) => ProfileScreen(),
   "/camera":(BuildContext context) => Camara(), //Poner el nombre de la clase de register de su propia pantalla
   "/historico":(BuildContext context) => Historico(), 
+  "/publicaciones":(BuildContext context) => Nuevo(),
 
 };
 

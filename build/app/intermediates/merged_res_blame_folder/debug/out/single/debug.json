@@ -1,9 +1,5 @@
 [
     {
-        "merged": "C:\\Users\\gabri\\Desktop\\Enginyeria d'Aplicacion\\Frontend\\Maps\\Maps-Drawer\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\gabri\\Desktop\\Enginyeria d'Aplicacion\\Frontend\\Maps\\Maps-Drawer\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\gabri\\Desktop\\Enginyeria d'Aplicacion\\Frontend\\Maps\\Maps-Drawer\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\gabri\\Desktop\\Enginyeria d'Aplicacion\\Frontend\\Maps\\Maps-Drawer\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
@@ -12,12 +8,16 @@
         "source": "C:\\Users\\gabri\\Desktop\\Enginyeria d'Aplicacion\\Frontend\\Maps\\Maps-Drawer\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\gabri\\Desktop\\Enginyeria d'Aplicacion\\Frontend\\Maps\\Maps-Drawer\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\gabri\\Desktop\\Enginyeria d'Aplicacion\\Frontend\\Maps\\Maps-Drawer\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\gabri\\Desktop\\Enginyeria d'Aplicacion\\Frontend\\Maps\\Maps-Drawer\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\gabri\\Desktop\\Enginyeria d'Aplicacion\\Frontend\\Maps\\Maps-Drawer\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\gabri\\Desktop\\Enginyeria d'Aplicacion\\Frontend\\Maps\\Maps-Drawer\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\gabri\\Desktop\\Enginyeria d'Aplicacion\\Frontend\\Maps\\Maps-Drawer\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\gabri\\Desktop\\Enginyeria d'Aplicacion\\Frontend\\Maps\\Maps-Drawer\\build\\app\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\gabri\\Desktop\\Enginyeria d'Aplicacion\\Frontend\\Maps\\Maps-Drawer\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\gabri\\Desktop\\Enginyeria d'Aplicacion\\Frontend\\Maps\\Maps-Drawer\\build\\app\\intermediates\\res\\merged\\debug\\drawable_launch_background.xml.flat",

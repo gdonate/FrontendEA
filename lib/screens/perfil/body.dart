@@ -23,19 +23,21 @@ class Body extends StatelessWidget{
           child: Row(
             children: [
               SvgPicture.asset('assets/icons/TimeIcon.svg',
-              width: 22,
+              width: 10,
               ),
               
               SizedBox(width: 20),
               Expanded(
                 child: Text(
                   "Histórico",
+              ),              
               ),
-              
-              ),
+
             ],
             
           ),
+          
+          
         ),
         )
         
