@@ -146,6 +146,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "flutter_chat_bubble",
+      "rootUri": "file:///C:/Users/Cristian-PC/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_chat_bubble-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_lints",
       "rootUri": "file:///C:/Users/Cristian-PC/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_lints-1.0.4",
       "packageUri": "lib/",
@@ -542,7 +548,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-12-21T14:56:00.031108Z",
+  "generated": "2022-01-20T16:38:43.803878Z",
   "generator": "pub",
   "generatorVersion": "2.15.0"
 }

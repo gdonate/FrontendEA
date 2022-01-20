@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:registro/screens/ChatScreen.dart';
+import 'package:registro/screens/ChatGroupScreen.dart';
 import '../util/navegate.dart';
 
 class ListaPublicaciones extends StatefulWidget {
@@ -41,15 +41,15 @@ class _ListaPublicacionesState extends State<ListaPublicaciones> {
                           onPressed: (){
                             if(publicaciones[index] == "Deportes"){
                               Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) => ChatScreen(room: "Deportes")));
+                                  MaterialPageRoute(builder: (context) => ChatGroupScreen(username: widget.username,room: "Deportes")));
                             }
                             else if(publicaciones[index] == "Tiempo"){
                               Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) => ChatScreen(room: "Tiempo")));
+                                  MaterialPageRoute(builder: (context) => ChatGroupScreen(username: widget.username,room: "Tiempo")));
                             }
                             else if(publicaciones[index] == "Economía"){
                               Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) => ChatScreen(room: "Economía")));
+                                  MaterialPageRoute(builder: (context) => ChatGroupScreen(username: widget.username,room: "Economia")));
                             }
                           },
                       )

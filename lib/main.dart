@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
-import 'package:registro/screens/ChatScreen.dart';
+import 'package:registro/screens/ChatGroupScreen.dart';
 import 'package:registro/screens/ListaPublicaciones.dart';
 import 'package:registro/screens/MapaScreen.dart';
 import 'package:registro/screens/Username.dart';
