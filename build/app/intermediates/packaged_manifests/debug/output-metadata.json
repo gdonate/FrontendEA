@@ -4,7 +4,7 @@
     "type": "PACKAGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "com.example.registro",
+  "applicationId": "com.example.auth_project",
   "variantName": "debug",
   "elements": [
     {

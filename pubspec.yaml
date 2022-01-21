@@ -56,6 +56,13 @@ dependencies:
   image_cropper: ^1.4.1
   image_picker: ^0.8.4+4
   flutter_form_builder: ^7.0.0
+  http_parser: ^4.0.0
+  google_sign_in: ^5.2.3
+  firebase_auth:
+  firebase_core:
+  shared_preferences: ^2.0.12
+  foundation_flutter: ^0.2.0
+
 
 
 dev_dependencies:

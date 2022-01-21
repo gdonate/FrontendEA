@@ -1,8 +1,13 @@
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
+import 'package:registro/constants.dart';
+import 'package:registro/models/auth_manager.dart';
 import 'package:registro/screens/Historico/historico.dart';
 import 'package:registro/screens/MapaScreen.dart';
+import 'package:registro/screens/auth_screen.dart';
 import 'package:registro/screens/camera.dart';
 import 'package:registro/screens/crearpublicacion.dart';
 import 'package:registro/screens/perfil.dart';
@@ -15,7 +20,11 @@ import 'screens/LoginPage.dart';
 import 'screens/home_page.dart';
 import 'screens/welcome_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await (kIsWeb
+      ? Firebase.initializeApp(options: Constants.firebaseOptions)
+      : Firebase.initializeApp());
   runApp(const MyApp());
 }
 
@@ -28,7 +37,10 @@ class MyApp extends StatelessWidget {
 
     return MultiProvider(
       providers: [
-        Provider<RegistroBloc> (create:(context) => RegistroBloc()),
+        Provider<RegistroBloc>(create: (context) => RegistroBloc()),
+        Provider<AuthManager>(
+          create: (context) => AuthManager(),
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -43,7 +55,6 @@ class MyApp extends StatelessWidget {
           GlobalCupertinoLocalizations.delegate,
         ],
         supportedLocales: S.delegate.supportedLocales,
-        
         home: const SplashScreen(),
         routes: routes,
       ),
@@ -51,16 +62,18 @@ class MyApp extends StatelessWidget {
   }
 }
 
-var routes = <String,WidgetBuilder>{
-  "/welcome":(BuildContext context) => const WelcomeScreen(),
-  "/login":(BuildContext context) => LoginPage(), //Poner el nombre de la clase de login de su propia pantalla
-  "/register":(BuildContext context) => Registro(),
-  "/home":(BuildContext context) => HomeScreen(), //Poner el nombre de la clase de register de su propia pantalla
-  "/map":(BuildContext context) => MapaScreen(), //Poner el nombre de la clase de register de su propia pantalla
-  "/perfil":(BuildContext context) => ProfileScreen(),
-  "/camera":(BuildContext context) => Camara(), //Poner el nombre de la clase de register de su propia pantalla
-  "/historico":(BuildContext context) => Historico(), 
-  "/publicaciones":(BuildContext context) => Nuevo(),
-
+var routes = <String, WidgetBuilder>{
+  "/welcome": (BuildContext context) => const WelcomeScreen(),
+  "/login": (BuildContext context) =>
+      AuthScreen(), //Poner el nombre de la clase de login de su propia pantalla
+  "/register": (BuildContext context) => Registro(),
+  "/home": (BuildContext context) =>
+      HomeScreen(), //Poner el nombre de la clase de register de su propia pantalla
+  "/map": (BuildContext context) =>
+      MapaScreen(), //Poner el nombre de la clase de register de su propia pantalla
+  "/perfil": (BuildContext context) => ProfileScreen(),
+  "/camera": (BuildContext context) =>
+      Camara(), //Poner el nombre de la clase de register de su propia pantalla
+  "/historico": (BuildContext context) => Historico(),
+  "/publicaciones": (BuildContext context) => Nuevo(),
 };
-
