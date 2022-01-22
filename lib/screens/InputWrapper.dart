@@ -15,7 +15,9 @@ class InputWrapper extends StatelessWidget {
           ),
           Container(
             decoration: BoxDecoration(
-                color: Colors.white, borderRadius: BorderRadius.circular(10)),
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
+            ),
             child: InputField(),
           ),
           SizedBox(

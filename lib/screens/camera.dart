@@ -197,7 +197,7 @@ class _CamaraState extends State<Camara> {
                 SizedBox(
                   height: 10,
                 ),
-                StreamBuilder<User>(
+                StreamBuilder<User?>(
                     stream: manager.userModel$,
                     builder: (context, snapshot) {
                       return ElevatedButton(

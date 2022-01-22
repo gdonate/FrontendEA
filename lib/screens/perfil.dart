@@ -36,7 +36,7 @@ class PerfilUser extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
-                    StreamBuilder<User>(
+                    StreamBuilder<User?>(
                         stream: manager.userModel$,
                         builder: (context, snapshot) {
                           User user = snapshot.data!;

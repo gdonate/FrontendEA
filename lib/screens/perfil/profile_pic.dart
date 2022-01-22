@@ -21,14 +21,18 @@ class ProfilePic extends StatelessWidget {
       child: Stack(
         fit: StackFit.expand,
         children: [
-          StreamBuilder<User>(
+          StreamBuilder<User?>(
               stream: manager.userModel$,
               builder: (context, snapshot) {
                 ImageProvider? image;
                 image = AssetImage("assets/images/luffy.jpg");
-                if (snapshot.hasData)
+                if (snapshot.hasData) if (manager.isGoogleSession) {
+                  image =
+                      NetworkImage(manager.inGoogleUser!.photoUrl.toString());
+                } else {
                   image = NetworkImage(
                       Constants.BASE_URL_MOBILE + snapshot.data!.imageUrl);
+                }
                 return CircleAvatar(backgroundImage: image);
               }),
           Positioned(

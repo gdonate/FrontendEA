@@ -65,7 +65,7 @@ class MyApp extends StatelessWidget {
 var routes = <String, WidgetBuilder>{
   "/welcome": (BuildContext context) => const WelcomeScreen(),
   "/login": (BuildContext context) =>
-      AuthScreen(), //Poner el nombre de la clase de login de su propia pantalla
+      LoginPage(), //Poner el nombre de la clase de login de su propia pantalla
   "/register": (BuildContext context) => Registro(),
   "/home": (BuildContext context) =>
       HomeScreen(), //Poner el nombre de la clase de register de su propia pantalla
