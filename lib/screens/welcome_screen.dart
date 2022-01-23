@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:registro/generated/l10n.dart';
 import 'package:registro/models/auth_manager.dart';
+import 'package:registro/screens/denunciaPage.dart';
+import 'package:registro/screens/reportarPage.dart';
 import '../util/navegate.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -169,6 +171,53 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     ),
                     const SizedBox(
                       height: 16,
+                    ),
+                              MaterialButton(
+                      height: 49,
+                      minWidth: 285,
+                      color: const Color(0xFFFFFFFF).withOpacity(0.20),
+                      elevation: 0,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12.0)),
+                      child: Text(
+                        "Reportar",
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white,
+                        ),
+                      ),
+                      onPressed: () => {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => PaginaReportar()))
+                      },
+                    ),
+                       const SizedBox(
+                      height: 16,
+                    ),
+                       MaterialButton(
+                      height: 49,
+                      minWidth: 285,
+                      color: const Color(0xFFFFFFFF).withOpacity(0.20),
+                      elevation: 0,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12.0)),
+                      child: Text(
+                        "Reportes",
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white,
+                        ),
+                      ),
+                      onPressed: () => {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => PaginaDenuncia()))
+                      },
                     ),
                   ],
                 ),
