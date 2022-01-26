@@ -1,6 +1,9 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:registro/models/auth_manager.dart';
+import 'package:http/http.dart' as http;
 
 import '../constants.dart';
 
@@ -13,12 +16,17 @@ class ServicePage extends StatefulWidget {
 }
 
 class _ServicePageState extends State<ServicePage> {
+  TextEditingController comentar = TextEditingController();
+  @override
+  void dispose() {
+    comentar.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     List comments = widget.service['comments'];
-    comments.add('No me gusta como da clases');
-    print(widget.service);
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
@@ -68,9 +76,11 @@ class _ServicePageState extends State<ServicePage> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  print(comentar.text);
+                },
                 child: Text(
-                  'Valorar',
+                  'Commentar',
                   style: TextStyle(
                     color: Colors.white,
                   ),
@@ -79,6 +89,7 @@ class _ServicePageState extends State<ServicePage> {
               Container(
                 width: size.width * 0.35,
                 child: TextField(
+                  controller: comentar,
                   decoration: InputDecoration(
                     label: Text('valoracion'),
                   ),
@@ -126,4 +137,40 @@ class _ServicePageState extends State<ServicePage> {
   }
 }
 
-Future<void> addRating() async {}
+Future<void> addRating(BuildContext context, AuthManager authManager, String id,
+    String comment) async {
+  var url = Uri.parse((kIsWeb)
+      ? Constants.BASE_URL_WEB + 'api/user/serv/comment/' + id
+      : Constants.BASE_URL_MOBILE + 'api/user/serv/comment/' + id);
+
+  Map<String, String> cookies = (kIsWeb)
+      ? Map<String, String>()
+      : {
+          'Cookie': 'accessToken=' +
+              authManager.inAcessToken.value.toString() +
+              '; ' +
+              'refreshToken=' +
+              authManager.inRefreshToken.value.toString()
+        };
+
+  Map<String, String> body = {"comment": comment};
+
+  var response = await http.put(url,
+      headers: (kIsWeb)
+          ? Constants.reqHeaders
+          : {...Constants.reqHeaders, ...cookies},
+      body: body);
+
+  if (kIsWeb) return;
+  //Get cookies
+  if (response.statusCode == 200) {
+    SnackBar snackBar = SnackBar(content: Text('Success'));
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+  } else {
+    SnackBar snackBar = SnackBar(content: Text('Something went wrong'));
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+  }
+}
+
+Future<void> addComment() async {}
+Future<void> buyService() async {}
