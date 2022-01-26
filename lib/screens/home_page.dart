@@ -3,12 +3,12 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:registro/generated/l10n.dart';
+import 'package:registro/screens/service_page.dart';
 import 'package:registro/sideServicio.dart';
 import 'package:registro/widget/bottom_nav_bar.dart';
 import "package:http/http.dart" as http;
 import 'package:registro/widget/service_card.dart';
 import '../util/navegate.dart';
-
 
 import '../platform_utils.dart';
 
@@ -27,8 +27,8 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Color(0xFFFFA50E),
         // leading: IconButton(
         //     onPressed: () {}, icon: Image.asset("assets/icons/logo.jpeg")),
-        title: IconButton(
-            onPressed: () {}, icon: Image.asset("assets/logo.png")),
+        title:
+            IconButton(onPressed: () {}, icon: Image.asset("assets/logo.png")),
         centerTitle: true,
 
         // actions: [
@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
         //       onPressed: () {}, icon: Image.asset("assets/icons/logo.jpeg"))
         // ],
       ),
-      
+
       // bottomNavigationBar: BottomNavBar(),
       body: Stack(
         children: <Widget>[
@@ -97,7 +97,6 @@ class HomeScreen extends StatelessWidget {
                               ConnectionState.done) {
                             final String result = snapshot.data!.body;
                             //decode the response to a json map and get the results array
-                            print(result);
                             final List services = jsonDecode(result);
                             return _buildCards(context, services);
                           } else {
@@ -114,16 +113,24 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-
-ListView _buildCards(BuildContext context, List services) {
-  return ListView.builder(
-      itemCount: services.length,
-      scrollDirection: Axis.horizontal,
-      shrinkWrap: true,
-      itemBuilder: (context, index) {
-        return ServiceCard(
-            description: services[index]['description'],
-            imgUrl: services[index]['img_url']);
-      });
-}
+  ListView _buildCards(BuildContext context, List services) {
+    return ListView.builder(
+        itemCount: services.length,
+        scrollDirection: Axis.horizontal,
+        shrinkWrap: true,
+        itemBuilder: (context, index) {
+          return GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          ServicePage(service: services[index])));
+            },
+            child: ServiceCard(
+                description: services[index]['description'],
+                imgUrl: services[index]['img_url']),
+          );
+        });
+  }
 }

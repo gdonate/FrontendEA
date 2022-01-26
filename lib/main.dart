@@ -5,6 +5,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:registro/constants.dart';
 import 'package:registro/models/auth_manager.dart';
+import 'package:registro/models/create_app_form_block.dart';
 import 'package:registro/screens/Historico/historico.dart';
 import 'package:registro/screens/MapaScreen.dart';
 import 'package:registro/screens/auth_screen.dart';
@@ -41,6 +42,7 @@ class MyApp extends StatelessWidget {
         Provider<AuthManager>(
           create: (context) => AuthManager(),
         ),
+        Provider<ServiceManager>(create: (context) => ServiceManager()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
